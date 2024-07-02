@@ -15,9 +15,9 @@ public class UserInfoFileManager {
             printWriter.println("Password: " + password);
 
             printWriter.close();
-            System.out.println("User information file created successfully.");
+            System.out.println("Файл с информацией о пользователе успешно создан.");
         } catch (IOException e) {
-            System.out.println("An error occurred while creating the user information file.");
+            System.out.println("Произошла ошибка при создании файла информации о пользователе.");
             e.printStackTrace();
         }
     }

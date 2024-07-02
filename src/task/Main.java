@@ -9,56 +9,56 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Welcome to the User Management System");
+        System.out.println("Добро пожаловать в систему управления пользователями.");
 
         boolean running = true;
         while (running) {
-            System.out.println("Enter a command: create, get, update, delete, list or exit");
+            System.out.println("Введите команду: создать, получить, обновить, удалить, перечислить или выйти.");
             String command = scanner.nextLine();
 
             switch (command) {
                 case "create":
-                    System.out.println("Enter the name of the user:");
+                    System.out.println("Введите имя пользователя:");
                     String newUser = scanner.nextLine();
                     users.add(newUser);
-                    System.out.println("User created successfully");
+                    System.out.println("Пользователь успешно создан");
                     break;
                 case "get":
-                    System.out.println("Enter the index of the user:");
+                    System.out.println("Введите индекс пользователя:");
                     int index = scanner.nextInt();
                     scanner.nextLine();
                     if (index < users.size()) {
                         System.out.println("User " + index + ": " + users.get(index));
                     } else {
-                        System.out.println("User not found");
+                        System.out.println("Пользователь не найден");
                     }
                     break;
                 case "update":
-                    System.out.println("Enter the index of the user to update:");
+                    System.out.println("Введите индекс пользователя для обновления:");
                     int updateIndex = scanner.nextInt();
                     scanner.nextLine();
                     if (updateIndex < users.size()) {
-                        System.out.println("Enter the new name for the user:");
+                        System.out.println("Введите новое имя пользователя:");
                         String updatedUser = scanner.nextLine();
                         users.set(updateIndex, updatedUser);
-                        System.out.println("User updated successfully");
+                        System.out.println("Пользователь обновлен успешно");
                     } else {
-                        System.out.println("User not found");
+                        System.out.println("Пользователь не найден");
                     }
                     break;
                 case "delete":
-                    System.out.println("Enter the index of the user to delete:");
+                    System.out.println("Введите индекс пользователя, которого требуется удалить:");
                     int deleteIndex = scanner.nextInt();
                     scanner.nextLine();
                     if (deleteIndex < users.size()) {
                         users.remove(deleteIndex);
-                        System.out.println("User deleted successfully");
+                        System.out.println("Пользователь успешно удален");
                     } else {
-                        System.out.println("User not found");
+                        System.out.println("Пользователь не найден");
                     }
                     break;
                 case "list":
-                    System.out.println("List of users:");
+                    System.out.println("Список пользователей:");
                     for (int i = 0; i < users.size(); i++) {
                         System.out.println("User " + i + ": " + users.get(i));
                     }
@@ -67,11 +67,11 @@ public class Main {
                     running = false;
                     break;
                 default:
-                    System.out.println("Invalid command. Please try again.");
+                    System.out.println("Неверная команда. Пожалуйста, попробуйте еще разю");
             }
         }
 
-        System.out.println("Thank you for using the User Management System");
+        System.out.println("Благодарим вас за использование системы управления пользователями");
     }
 
 }
