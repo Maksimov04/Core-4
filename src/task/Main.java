@@ -8,6 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        UserInfoFileManager userInfoFileManager = new UserInfoFileManager();
+        userInfoFileManager.createUserInfoFile("Иван", "pandas1987@mail.ru","1233111");
 
         System.out.println("Добро пожаловать в систему управления пользователями.");
 
@@ -72,6 +74,6 @@ public class Main {
         }
 
         System.out.println("Благодарим вас за использование системы управления пользователями");
-    }
 
+    }
 }

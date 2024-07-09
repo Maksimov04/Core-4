@@ -22,10 +22,7 @@ public class UserInfoFileManager {
         }
     }
 
-    public static void main(String[] args) {
-        UserInfoFileManager userInfoFileManager = new UserInfoFileManager();
-        userInfoFileManager.createUserInfoFile("john_doe", "johndoe@email.com", "password123");
-    }
+
 }
 
 
