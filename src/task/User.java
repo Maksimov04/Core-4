@@ -1,70 +1,65 @@
 package task;
 
 public class User {
-    int id;
-    String name;
-    int age;
-    String email;
-    String adress;
+    private int id;
+    private String name;
+    private int age;
+    private String email;
+    private String address;
 
-    public User(int id, String name, int age, String email, String adress) {
+    public User(int id, String name, int age, String email, String address) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.email = email;
-        this.adress = adress;
+        this.address = address;
     }
 
+    // Геттеры и сеттеры
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public String getEmail() {
         return email;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public String getAdress() {
-        return adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                '}';
     }
-
-    public static void main(String[] args) {
-        User user = new User(1, "Илья", 25, "example@gmail.com", "Пенза, Россия");
-
-        System.out.println("ID: " + user.getId());
-        System.out.println("Имя: " + user.getName());
-        System.out.println("Возраст: " + user.getAge());
-        System.out.println("Email: " + user.getEmail());
-        System.out.println("Адрес: " + user.getAdress());
-    }
-
 }
-
-
